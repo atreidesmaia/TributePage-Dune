@@ -1,0 +1,158 @@
+/************************************/
+/* REM, based on https://snook.ca/archives/html_and_css/font-size-with-rem*/
+/* https://medium.com/code-better/css-units-for-font-size-px-em-rem-79f7e592bb97 */
+/* REM unit is based on HTML element*/
+
+html{
+  background-color:#EADAD3;
+  font-size: 62.5%;
+  /* default 16px,
+  fontsize 62.5%
+  10px = 1 rem */
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+/************************************/
+/* MediaQuery, Screensizes*/
+/* Size all devices less than 800px */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+/* myTumblr link will appear if
+pointer is over image */
+.text{
+  position: absolute;
+  left: 0;
+  top: 30%;
+  width: 100%;
+}
+
+/* Size all devices at least 800px */
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2{
+    font-size: 3rem;
+  }
+  .text{
+    top:50%;
+  }
+}
+
+/************************************/
+#title{
+  letter-spacing: 0.8rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
+#subtitle{
+  font-style: oblique;
+  font-weight: 300;
+
+}
+
+/************************************/
+/* As the image is quite big, it has been
+set up not to be more than 500px height,
+but the container box img-div can get bigger
+Also, display/margin defines a block centered */
+
+img{
+  max-height: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+/************************************/
+/* Little transition, just for practice */
+img:hover {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* myTumblr visibility if pointer
+is over or not */
+#img-div .text{
+  visibility:hidden;
+}
+
+#img-div:hover .text{
+  visibility:visible;
+}
+
+/************************************/
+/********* BOX settings *************/
+
+#main{ /*main, the box */
+  background-color: #DFCFC7;
+  padding: 20px;
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+
+#img-div{ /* figure */
+  background-color:#EEE5E1;
+  border-radius: 30px;
+  padding: 15px;
+}
+
+#img-caption{ /* figcaption */
+  padding-top: 20px;
+  font-size: 1.5rem;
+  font-weight: 200;
+  max-width: 800px; /* limit length of text under image */
+  display: block;
+  margin: 0 auto;
+}
+
+#image{ /* img */
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+#tribute-info{
+  letter-spacing: 3px;
+}
+
+/******************************************/
+/********* Lists & blockquote *************/
+
+ul{
+  max-width: 550px;
+  width: 70%;
+  margin: auto;
+  text-align: left;
+}
+
+blockquote{
+  font-style: italic;
+  text-align: right;
+}
+
+
+/************************************/
+/********* LINK Format *************/
+
+a {
+  color: #000000;
+}
+
+a:visited{
+  color: #FFFFFF;
+}
